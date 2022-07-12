@@ -1,5 +1,6 @@
 package com.ford.test;
 
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -102,7 +103,9 @@ public class RomanConverter implements Converter {
 
     @Override
     public int convertRomanToInt(String roman) {
-
+        if(roman == null || roman.isEmpty() || !roman.matches("[IVXLCDM]]")){
+            throw new IllegalArgumentException("Invalid characters not allowed");
+        }
         int len = roman.length();
         int sum = romanToIntMap.get(Character.valueOf(roman.charAt(0)));
 
