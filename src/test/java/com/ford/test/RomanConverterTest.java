@@ -276,7 +276,7 @@ class RomanConverterTest {
 
     @Test
     void testConvertRomanToInt_InvalidChars() {
-        Throwable thrown = assertThrows(IllegalArgumentException.class, () -> romanConverter.convertRomanToInt("12xIM"));
+        Throwable thrown = assertThrows(IllegalArgumentException.class, () -> romanConverter.convertRomanToInt(" "));
         assertEquals("Invalid characters not allowed", thrown.getMessage());
     }
 
