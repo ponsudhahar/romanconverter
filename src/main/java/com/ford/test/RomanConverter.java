@@ -103,7 +103,7 @@ public class RomanConverter implements Converter {
 
     @Override
     public int convertRomanToInt(String roman) {
-        if(roman == null || roman.isEmpty() || roman.matches("(\\s)")){
+        if(roman == null || roman.matches("(\\s)")){
             throw new IllegalArgumentException("Invalid characters not allowed");
         }
         int len = roman.length();
